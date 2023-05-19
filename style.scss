@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e9ebec;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+}
+h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+div:last-child {
+  margin-bottom: 120px;
+}
+table tr td img {
+  max-width: 150px;
+}
+
+// default/basic styles
+.container {
+  padding: 90px 15px;
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+  }
+  table tr td,
+  table tr th {
+    border: 1px solid #ff0000;
+    padding: 12px 8px;
+  }
+}
+
+// example 1
+.example-1 {
+  background-color: #bdd6ff;
+  table tr th {
+    text-align: left;
+  }
+}
+
+// example 2
+.example-2 {
+  background-color: #b1fccb;
+  table {
+    text-align: center;
+  }
+}
+
+// example 3
+.example-3 {
+  background-color: #fcd2d5;
+  table {
+    // first tr and then first th (Column 1)
+    tr:first-child th:first-child {
+      text-align: left;
+    }
+    // all cells under the first column
+    tr td:first-child {
+      text-align: left; /* even though they are left-alignd from the beginning*/
+    }
+    // first element of the second column (Column 2)
+    tr:first-child th:nth-child(2) {
+      text-align: center; /* even thought it's centered from the beginning */
+    }
+    // all cells under the second column
+    tr td:nth-child(2) {
+      text-align: center;
+    }
+    // first element of the third column (Column 3)
+    tr:first-child th:nth-child(3) {
+      text-align: right;
+    }
+    // all cells under the third column
+    tr td:nth-child(3) {
+      text-align: right;
+    }
+    // first element of the fourth column (Column 4)
+    tr:first-child th:nth-child(4) {
+      text-align: left;
+    }
+    // all cells under the fourth column
+    tr td:nth-child(4) {
+      text-align: right;
+    }
+  }
+}
+
+// example 4
+.example-4 {
+  background-color: #ffeda6;
+  table tr:first-child {
+    text-align: left;
+  }
+  table tr td {
+    height: 150px;
+  }
+  // default/reset ends above
+  table {
+    // Apple, Bicycle, Carrot, (cat image {low specificity})
+    tr:nth-child(2) td {
+      vertical-align: top;
+    }
+    // Elephant, Fire, Giraffe, (dog image {low specificity})
+    tr:nth-child(3) td {
+      vertical-align: middle;
+    }
+    // Ice, Jelly, Kite, (rabbit image {low specificity})
+    tr:nth-child(4) td {
+      vertical-align: bottom;
+    }
+    // cat (high specificity - winner)
+    tr:nth-child(2) td:last-child {
+      vertical-align: top;
+      text-align: right;
+    }
+    // dog (high specificity - winner)
+    tr:nth-child(3) td:last-child {
+      vertical-align: middle;
+      text-align: center;
+    }
+    // rabbit (high specificity - winner)
+    tr:nth-child(4) td:last-child {
+      vertical-align: bottom;
+      text-align: left;
+    }
+  }
+}

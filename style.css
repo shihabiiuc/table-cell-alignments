@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e9ebec;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+div:last-child {
+  margin-bottom: 120px;
+}
+
+table tr td img {
+  max-width: 150px;
+}
+
+.container {
+  padding: 90px 15px;
+}
+.container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+}
+.container table tr td,
+.container table tr th {
+  border: 1px solid #ff0000;
+  padding: 12px 8px;
+}
+
+.example-1 {
+  background-color: #bdd6ff;
+}
+.example-1 table tr th {
+  text-align: left;
+}
+
+.example-2 {
+  background-color: #b1fccb;
+}
+.example-2 table {
+  text-align: center;
+}
+
+.example-3 {
+  background-color: #fcd2d5;
+}
+.example-3 table tr:first-child th:first-child {
+  text-align: left;
+}
+.example-3 table tr td:first-child {
+  text-align: left; /* even though they are left-alignd from the beginning*/
+}
+.example-3 table tr:first-child th:nth-child(2) {
+  text-align: center; /* even thought it's centered from the beginning */
+}
+.example-3 table tr td:nth-child(2) {
+  text-align: center;
+}
+.example-3 table tr:first-child th:nth-child(3) {
+  text-align: right;
+}
+.example-3 table tr td:nth-child(3) {
+  text-align: right;
+}
+.example-3 table tr:first-child th:nth-child(4) {
+  text-align: left;
+}
+.example-3 table tr td:nth-child(4) {
+  text-align: right;
+}
+
+.example-4 {
+  background-color: #ffeda6;
+}
+.example-4 table tr:first-child {
+  text-align: left;
+}
+.example-4 table tr td {
+  height: 150px;
+}
+.example-4 table tr:nth-child(2) td {
+  vertical-align: top;
+}
+.example-4 table tr:nth-child(3) td {
+  vertical-align: middle;
+}
+.example-4 table tr:nth-child(4) td {
+  vertical-align: bottom;
+}
+.example-4 table tr:nth-child(2) td:last-child {
+  vertical-align: top;
+  text-align: right;
+}
+.example-4 table tr:nth-child(3) td:last-child {
+  vertical-align: middle;
+  text-align: center;
+}
+.example-4 table tr:nth-child(4) td:last-child {
+  vertical-align: bottom;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
