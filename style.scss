@@ -10,17 +10,18 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2em;
 }
+img {
+  max-width: 100%;
+}
 h2 {
   text-align: center;
   margin: 0;
   margin-bottom: 5px;
 }
 
-div:last-child {
-  margin-bottom: 120px;
-}
 table tr td img {
-  max-width: 150px;
+  width: 150px;
+  max-width: 100%;
 }
 
 // default/basic styles
